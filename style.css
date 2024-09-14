@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Soda Shake";
+    src: url(fonts/SodaShake.ttf);
+}
+
+body {
+    font-family: Arial, sans-serif; /* Sets a base font for the page */
+    line-height: 1.6; /* Increases readability */
+    color: #333; /* Sets a base text color */
+    background-color: #f4f4f4; /* Sets a background color for the page */
+}
+
+.title {
+    font-size: large;
+    font-family: "Soda Shake";
+}
