@@ -31,3 +31,7 @@ function CreateTable() {
 
     body.appendChild(tbl);
 }
+
+function AddAccount(Name) {
+
+}
