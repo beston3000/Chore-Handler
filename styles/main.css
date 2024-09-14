@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Soda Shake";
-    src: url(fonts/SodaShake.ttf) format("truetype");
+    src: url("../fonts/SodaShake.ttf") format("truetype");
 }
 
 body {
