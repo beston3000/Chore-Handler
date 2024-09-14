@@ -12,6 +12,10 @@ function CreateTable() {
     tbl.style.width = '100px';
     tbl.style.border = '1px solid black';
 
+    tbl.insertRow(-1);
+    tbl.insertRow(-1);
+    tbl.insertRow(-1);
+
     
     body.appendChild(tbl);
   }
