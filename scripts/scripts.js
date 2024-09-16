@@ -52,9 +52,9 @@ function CreateTable() {
     body.appendChild(tbl);
 }
 
-function AddAccount(AccName) {
+function AddAccount() {
 
-    let accTable = JSON.parse(localStorage.getItem("Accounts"))
+    const AccName = document.getElementById("accountInputText").value;
 
     accTable[AccName] = 0
 
