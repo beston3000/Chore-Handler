@@ -61,7 +61,12 @@ function AddAccount() {
     
     let accTable = JSON.parse(localStorage.getItem("Accounts"))
 
-    accTable[AccName] = 0
+    if (!accTable)
+    {
+        accTable = {}
+    }
+
+    accTable[AccName] = accTable[AccName] || 0;
 
     localStorage.setItem("Accounts", JSON.stringify(accTable))
 
