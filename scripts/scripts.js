@@ -58,7 +58,7 @@ function CreateTable() {
 function AddAccount() {
 
     const AccName = document.getElementById("accountInputText").value;
-
+    
     let accTable = JSON.parse(localStorage.getItem("Accounts"))
 
     accTable[AccName] = 0
