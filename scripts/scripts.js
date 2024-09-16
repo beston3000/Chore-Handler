@@ -18,7 +18,7 @@ function RemoveMoney(Name, Amount) {
 
 function CreateTable() {
     const body = document.body,
-          tbl = document.getElementById("acctable");
+    tbl = document.getElementById("acctable");
     tbl.style.width = '25%';
     tbl.style.marginLeft = 'auto';
     tbl.style.marginRight = 'auto';
@@ -61,7 +61,7 @@ function AddAccount(AccName) {
     localStorage.setItem("Accounts", JSON.stringify(accTable))
 }
 
-function RemoveAccount(AccName) {
+function RemoveAccount() {
 
     const AccName = document.getElementById("accountInputText").value;
 
