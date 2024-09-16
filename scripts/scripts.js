@@ -1,3 +1,5 @@
+var selectedMoneyAccount = ""
+
 function AddMoney(Name, Amount) {
     let newTable = JSON.parse(localStorage.getItem("Accounts"));
     
@@ -46,7 +48,7 @@ function CreateTable() {
         const account = AccountsTable[key]
 
         const RemoveButton = document.createElement("button")
-        RemoveButton.text = "Remove Account";
+        RemoveButton.textContent = "Remove Account";
         RemoveButton.style.backgroundColor = 'red';
 
         const row = tbl.insertRow();
@@ -96,5 +98,16 @@ function RemoveAccount() {
     localStorage.setItem("Accounts", JSON.stringify(accTable))
 
     CreateTable();
+    }
+}
+
+function SelectMoneyAccount(AccountName) {
+    const AccountTable = JSON.parse(localStorage.getItem("Accounts"));
+
+    if (AccountTable[AccountName]) {
+        selectedMoneyAccount = AccountName
+        const Text = document.getElementById("selectedAccText");
+
+        Text.textContent = "Selected Account: " + AccountName;
     }
 }
