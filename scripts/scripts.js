@@ -23,6 +23,7 @@ function CreateTable() {
     if (AccountsTable) {
     const body = document.body,
     tbl = document.getElementById("acctable");
+    tbl.style.border = '4p';
     tbl.innerHTML = "";
     tbl.style.width = '25%';
     tbl.style.marginLeft = 'auto';
@@ -33,7 +34,7 @@ function CreateTable() {
     // Create the header row
     const header = tbl.createTHead();
     const headerRow = header.insertRow(0);
-    const headers = ['Name', 'Money'];
+    const headers = ['Name', 'Money', ''];
     headers.forEach(text => {
         const th = document.createElement('th');
         th.appendChild(document.createTextNode(text));
@@ -44,11 +45,19 @@ function CreateTable() {
 
         const account = AccountsTable[key]
 
+        const RemoveButton = document.createElement("button")
+        RemoveButton.text = "Remove Account";
+        RemoveButton.style.backgroundColor = 'red';
+
         const row = tbl.insertRow();
         const cell1 = row.insertCell(0);
         const cell2 = row.insertCell(1);
+        const cell3 = row.insertCell(2);
         cell1.textContent = key;
         cell2.textContent = account;
+        cell3.textContent = RemoveButton
+
+        RemoveButton.onclick = function(){RemoveAccount(key)};
     }
     )
 
