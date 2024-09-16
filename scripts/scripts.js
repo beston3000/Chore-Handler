@@ -59,6 +59,8 @@ function AddAccount() {
 
     const AccName = document.getElementById("accountInputText").value;
 
+    let accTable = JSON.parse(localStorage.getItem("Accounts"))
+
     accTable[AccName] = 0
 
     localStorage.setItem("Accounts", JSON.stringify(accTable))
