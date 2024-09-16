@@ -17,6 +17,10 @@ function RemoveMoney(Name, Amount) {
 }
 
 function CreateTable() {
+
+    const AccountsTable = JSON.parse(localStorage.getItem("Accounts"));
+
+    if (AccountsTable) {
     const body = document.body,
     tbl = document.getElementById("acctable");
     tbl.style.width = '25%';
@@ -35,8 +39,6 @@ function CreateTable() {
         headerRow.appendChild(th);
     });
 
-    const AccountsTable = JSON.parse(localStorage.getItem("Accounts"));
-
     Object.keys(AccountsTable).forEach(key => {
 
         const account = AccountsTable[key]
@@ -50,6 +52,7 @@ function CreateTable() {
     )
 
     body.appendChild(tbl);
+    }
 }
 
 function AddAccount() {
@@ -59,9 +62,13 @@ function AddAccount() {
     accTable[AccName] = 0
 
     localStorage.setItem("Accounts", JSON.stringify(accTable))
+
+    CreateTable();
 }
 
 function RemoveAccount() {
+
+    if (localStorage.getItem("Accounts")) {
 
     const AccName = document.getElementById("accountInputText").value;
 
@@ -70,4 +77,7 @@ function RemoveAccount() {
     delete accTable[AccName]
 
     localStorage.setItem("Accounts", JSON.stringify(accTable))
+
+    CreateTable();
+    }
 }
