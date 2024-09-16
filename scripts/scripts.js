@@ -23,6 +23,7 @@ function CreateTable() {
     if (AccountsTable) {
     const body = document.body,
     tbl = document.getElementById("acctable");
+    tbl.innerHTML = "";
     tbl.style.width = '25%';
     tbl.style.marginLeft = 'auto';
     tbl.style.marginRight = 'auto';
