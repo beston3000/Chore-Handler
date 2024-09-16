@@ -1,5 +1,3 @@
-var selectedMoneyAccount = ""
-
 function AddMoney(Name, Amount) {
     let newTable = JSON.parse(localStorage.getItem("Accounts"));
     
@@ -57,7 +55,7 @@ function CreateTable() {
         const cell3 = row.insertCell(2);
         cell1.textContent = key;
         cell2.textContent = account;
-        cell3.textContent = RemoveButton
+        cell3.appendChild(RemoveButton);
 
         RemoveButton.onclick = function(){RemoveAccount(key)};
     }
@@ -105,7 +103,7 @@ function SelectMoneyAccount(AccountName) {
     const AccountTable = JSON.parse(localStorage.getItem("Accounts"));
 
     if (AccountTable[AccountName]) {
-        selectedMoneyAccount = AccountName
+        localStorage.setItem("selectedMoneyAcc", AccountName)
         const Text = document.getElementById("selectedAccText");
 
         Text.textContent = "Selected Account: " + AccountName;
