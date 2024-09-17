@@ -89,8 +89,6 @@ function RemoveAccount(AccName) {
 
     let accTable = JSON.parse(localStorage.getItem("Accounts"));
 
-    print(AccName);
-
     delete accTable[AccName];
 
     localStorage.setItem("Accounts", JSON.stringify(accTable));
