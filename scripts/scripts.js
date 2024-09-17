@@ -78,12 +78,12 @@ function CreateTable(IsMoneyPage) {
         }
         if (IsMoneyPage == true) {
             const SelectButton = document.createElement("button")
-            RemoveButton.textContent = "Select Account";
-            RemoveButton.style.backgroundColor = 'blue';
+            SelectButton.textContent = "Select Account";
+            SelectButton.style.backgroundColor = 'blue';
 
             cell3.appendChild(SelectButton);
 
-            RemoveButton.onclick = function(){SelectMoneyAccount(key)};
+            SelectButton.onclick = function(){SelectMoneyAccount(key)};
         }
     }
     )
