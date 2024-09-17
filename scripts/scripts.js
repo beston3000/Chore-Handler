@@ -28,7 +28,7 @@ function CreateTable(IsMoneyPage) {
 
     const AccountsTable = JSON.parse(localStorage.getItem("Accounts"));
 
-    if (AccountsTable && AccountsTable.length > 0) {
+    if (AccountsTable && localStorage.getItem("AccNum") > 0) {
     const body = document.body,
     tbl = document.getElementById("acctable");
     tbl.style.border = '4p';
@@ -90,6 +90,8 @@ function CreateTable(IsMoneyPage) {
 
 function AddAccount() {
 
+    localStorage.setItem("AccNum", localStorage.getItem("AccNum") + 1)
+
     const AccName = document.getElementById("accountInputText").value;
     
     let accTable = JSON.parse(localStorage.getItem("Accounts"))
@@ -110,13 +112,15 @@ function RemoveAccount(AccName) {
 
     if (localStorage.getItem ("Accounts")) {
 
-    let accTable = JSON.parse(localStorage.getItem("Accounts"));
+        localStorage.setItem("AccNum", localStorage.getItem("AccNum") - 1)
 
-    delete accTable[AccName];
+        let accTable = JSON.parse(localStorage.getItem("Accounts"));
 
-    localStorage.setItem("Accounts", JSON.stringify(accTable));
+        delete accTable[AccName];
 
-    CreateTable();
+        localStorage.setItem("Accounts", JSON.stringify(accTable));
+
+        CreateTable();
     }
 }
 
