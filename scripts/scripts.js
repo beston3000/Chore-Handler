@@ -65,7 +65,7 @@ function CreateTable(IsMoneyPage) {
         cell1.textContent = key;
         cell2.textContent = account;
 
-        if (!IsMoneyPage) {
+        if (IsMoneyPage != true) {
 
             const RemoveButton = document.createElement("button")
             RemoveButton.textContent = "Remove Account";
@@ -76,7 +76,7 @@ function CreateTable(IsMoneyPage) {
             RemoveButton.onclick = function(){RemoveAccount(key)};
             
         }
-        else {
+        if (IsMoneyPage == true) {
             const SelectButton = document.createElement("button")
             RemoveButton.textContent = "Select Account";
             RemoveButton.style.backgroundColor = 'green';
