@@ -3,7 +3,7 @@
     src: url("../fonts/SodaShake.ttf") format("truetype");
 }
 
-body { 
+body {
     font-family: Arial, sans-serif; /* Sets a base font for the page */
     line-height: 1.6; /* Increases readability */
     color: #000000; /* Sets a base text color */
@@ -17,7 +17,8 @@ body {
 }
 
 td {
-    border-width: 10px;
+    border-width: 100px;
+    border-radius: 100px;
     border-spacing: 5vw;
     border-color: #000000;
     background-color: rgb(0, 241, 149);
