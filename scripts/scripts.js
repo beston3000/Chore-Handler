@@ -127,6 +127,8 @@ function RemoveAccount(AccName) {
 function SelectMoneyAccount(AccountName) {
     const AccountTable = JSON.parse(localStorage.getItem("Accounts"));
 
+    console.log(AccountName)
+
     if (AccountTable[AccountName]) {
         localStorage.setItem("selectedMoneyAcc", AccountName)
         const Text = document.getElementById("selectedAccText");
