@@ -81,7 +81,7 @@ function CreateTable(IsMoneyPage) {
             RemoveButton.textContent = "Select Account";
             RemoveButton.style.backgroundColor = 'green';
 
-            cell3.appendChild(RemoveButton);
+            cell3.appendChild(SelectButton);
 
             RemoveButton.onclick = function(){SelectMoneyAccount(key)};
         }
