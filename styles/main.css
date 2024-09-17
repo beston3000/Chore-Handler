@@ -17,7 +17,7 @@ body {
 }
 
 td {
-    border: 60px;
+    border: 5px solid black;
     border-radius: 20px;
     border-spacing: 25vw;
     padding: 20vw;
