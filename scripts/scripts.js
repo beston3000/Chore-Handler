@@ -83,17 +83,17 @@ function AddAccount() {
     CreateTable();
 }
 
-function RemoveAccount() {
+function RemoveAccount(AccName) {
 
-    if (localStorage.getItem("Accounts")) {
+    if (localStorage.getItem ("Accounts")) {
 
-    const AccName = document.getElementById("accountInputText").value;
+    let accTable = JSON.parse(localStorage.getItem("Accounts"));
 
-    let accTable = JSON.parse(localStorage.getItem("Accounts"))
+    print(AccName);
 
-    delete accTable[AccName]
+    delete accTable[AccName];
 
-    localStorage.setItem("Accounts", JSON.stringify(accTable))
+    localStorage.setItem("Accounts", JSON.stringify(accTable));
 
     CreateTable();
     }
