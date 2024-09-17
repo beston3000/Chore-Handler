@@ -79,7 +79,7 @@ function CreateTable(IsMoneyPage) {
         if (IsMoneyPage == true) {
             const SelectButton = document.createElement("button")
             RemoveButton.textContent = "Select Account";
-            RemoveButton.style.backgroundColor = 'green';
+            RemoveButton.style.backgroundColor = 'blue';
 
             cell3.appendChild(SelectButton);
 
