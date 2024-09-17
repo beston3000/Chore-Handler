@@ -8,6 +8,8 @@ function AddMoney() {
     if (newTable[Name]) {
         newTable[Name] += Amount
         localStorage.setItem("Accounts", JSON.stringify(newTable));
+
+        CreateTable(true);
     }
 }
 
@@ -21,6 +23,8 @@ function RemoveMoney() {
     if (newTable[Name]) {
         newTable[Name] -= Amount
         localStorage.setItem("Accounts", JSON.stringify(newTable));
+
+        CreateTable(true);
     }
 }
 
@@ -103,7 +107,7 @@ function AddAccount() {
 
     localStorage.setItem("Accounts", JSON.stringify(accTable))
 
-    CreateTable();
+    CreateTable(thingy);
 }
 
 function RemoveAccount(AccName) {
