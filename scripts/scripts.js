@@ -1,3 +1,6 @@
+var SelectedAccount = ""
+
+
 function AddMoney() {
     let newTable = JSON.parse(localStorage.getItem("Accounts"));
     
@@ -130,9 +133,9 @@ function SelectMoneyAccount(AccountName) {
     console.log(AccountName)
 
     if (AccountTable[AccountName]) {
-        localStorage.setItem("selectedMoneyAcc", AccountName)
-        const Text = document.getElementById("selectedAccText");
+        SelectedAccount = AccountName
+        const Textyyyy = document.getElementById("selectedAccText");
 
-        Text.textContent = "Selected Account: " + AccountName;
+        Textyyyy.textContent = "Selected Account: " + AccountName;
     }
 }
