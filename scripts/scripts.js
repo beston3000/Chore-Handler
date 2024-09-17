@@ -107,7 +107,7 @@ function AddAccount() {
 
     localStorage.setItem("Accounts", JSON.stringify(accTable))
 
-    CreateTable(thingy);
+    CreateTable();
 }
 
 function RemoveAccount(AccName) {
