@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<script src="../scripts/scripts.js"></script>
-<link rel="stylesheet" href="../styles/main.css">
+
 <html>
+
+    <script src="../scripts/scripts.js"></script>
+    <link rel="stylesheet" href="../styles/main.css">
+
     <head>
         <title>Edit Money</title>
     </head>
@@ -9,7 +12,9 @@
     <body style="background-color: rgb(50, 122, 255);" onload="CreateTable()">
         <center><h1 class="Title">Edit Money</h1></center>
         <center><h3 id="selectedAccText">Selected Account: None</h3></center>
-        <center><input type="text" id="accountInputText">Account Name</center>
+        <center><input type="text" id="moneyInputText"> Account Name</center>
+        <center><button onclick="AddMoney()">Add Money</button></center>
+        <center><button onclick="RemoveMoney()">Remove Money</button></center>
 
         
         <center><table id="acctable"></table></center>

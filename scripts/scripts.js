@@ -1,26 +1,34 @@
-function AddMoney(Name, Amount) {
+function AddMoney() {
     let newTable = JSON.parse(localStorage.getItem("Accounts"));
     
+    const Name = localStorage.getItem("selectedMoneyAcc")
+    const Amount = Number(document.getElementById("moneyInputText").value);
+    
+
     if (newTable[Name]) {
         newTable[Name] += Amount
         localStorage.setItem("Accounts", JSON.stringify(newTable));
     }
 }
 
-function RemoveMoney(Name, Amount) {
+function RemoveMoney() {
     let newTable = JSON.parse(localStorage.getItem("Accounts"));
     
+    const Name = localStorage.getItem("selectedMoneyAcc")
+    const Amount = Number(document.getElementById("moneyInputText").value);
+    
+
     if (newTable[Name]) {
         newTable[Name] -= Amount
         localStorage.setItem("Accounts", JSON.stringify(newTable));
     }
 }
 
-function CreateTable() {
+function CreateTable(IsMoneyPage) {
 
     const AccountsTable = JSON.parse(localStorage.getItem("Accounts"));
 
-    if (AccountsTable) {
+    if (AccountsTable && AccountsTable.length > 0) {
     const body = document.body,
     tbl = document.getElementById("acctable");
     tbl.style.border = '4p';
@@ -45,10 +53,6 @@ function CreateTable() {
 
         const account = AccountsTable[key]
 
-        const RemoveButton = document.createElement("button")
-        RemoveButton.textContent = "Remove Account";
-        RemoveButton.style.backgroundColor = 'red';
-
         const row = tbl.insertRow();
         const cell1 = row.insertCell(0);
         const cell2 = row.insertCell(1);
@@ -56,9 +60,27 @@ function CreateTable() {
         
         cell1.textContent = key;
         cell2.textContent = account;
-        cell3.appendChild(RemoveButton);
 
-        RemoveButton.onclick = function(){RemoveAccount(key)};
+        if (!IsMoneyPage) {
+
+            const RemoveButton = document.createElement("button")
+            RemoveButton.textContent = "Remove Account";
+            RemoveButton.style.backgroundColor = 'red';
+
+            cell3.appendChild(RemoveButton);
+
+            RemoveButton.onclick = function(){RemoveAccount(key)};
+            
+        }
+        else {
+            const SelectButton = document.createElement("button")
+            RemoveButton.textContent = "Select Account";
+            RemoveButton.style.backgroundColor = 'green';
+
+            cell3.appendChild(RemoveButton);
+
+            RemoveButton.onclick = function(){SelectMoneyAccount(key)};
+        }
     }
     )
 
