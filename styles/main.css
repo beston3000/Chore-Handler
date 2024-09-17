@@ -18,9 +18,9 @@ body {
 
 td {
     border: 5px solid black;
-    border-radius: 20px;
-    border-spacing: 25vw;
-    padding: 20vw;
+    border-radius: 5px;
+    border-spacing: 5vw;
+    padding: 5vw;
     border-color: #000000;
     background-color: rgb(0, 190, 117);
 }
