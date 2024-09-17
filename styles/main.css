@@ -17,7 +17,7 @@ body {
 }
 
 td {
-    border: 1px;
+    border-width: 10px;
     border-spacing: 5vw;
     border-color: #000000;
     background-color: rgb(0, 241, 149);
