@@ -134,7 +134,7 @@ function SelectMoneyAccount(AccountName) {
 
     console.log(AccountTable)
 
-    if (AccountTable[AccountName]) {
+    if (AccountName in AccountTable) {
 
         console.log("Found Account");
         SelectedAccount = AccountName
