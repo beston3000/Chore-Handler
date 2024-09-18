@@ -4,12 +4,11 @@ var SelectedAccount = ""
 function AddMoney() {
     let newTable = JSON.parse(localStorage.getItem("Accounts"));
     
-    const Name = localStorage.getItem("selectedMoneyAcc")
     const Amount = Number(document.getElementById("moneyInputText").value);
     
 
-    if (newTable[Name]) {
-        newTable[Name] += Amount
+    if (newTable[SelectedAccount]) {
+        newTable[SelectedAccount] += Amount
         localStorage.setItem("Accounts", JSON.stringify(newTable));
 
         CreateTable(true);
