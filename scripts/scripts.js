@@ -133,6 +133,8 @@ function SelectMoneyAccount(AccountName) {
     console.log(AccountName)
 
     if (AccountTable[AccountName]) {
+
+        console.log("Found Account");
         SelectedAccount = AccountName
         const Textyyyy = document.getElementById("selectedAccText");
 
