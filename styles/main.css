@@ -25,3 +25,10 @@ td {
     border-color: #000000;
     background-color: rgb(0, 190, 117);
 }
+
+.backButton {
+    position: absolute; /* Position the button absolutely */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the right */
+    padding: 10px 20px; /* Add some padding */
+}
