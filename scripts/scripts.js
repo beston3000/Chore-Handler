@@ -141,3 +141,7 @@ function SelectMoneyAccount(AccountName) {
         Textyyyy.textContent = "Selected Account: " + AccountName;
     }
 }
+
+function OpenLink(link) {
+    window.location.href = link
+}
