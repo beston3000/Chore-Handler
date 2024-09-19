@@ -71,6 +71,7 @@ function CreateTable(IsMoneyPage) {
             const RemoveButton = document.createElement("button")
             RemoveButton.textContent = "Remove Account";
             RemoveButton.style.backgroundColor = 'red';
+            RemoveButton.style.color = 'black'
 
             cell3.appendChild(RemoveButton);
 
@@ -81,6 +82,7 @@ function CreateTable(IsMoneyPage) {
             const SelectButton = document.createElement("button")
             SelectButton.textContent = "Select Account";
             SelectButton.style.backgroundColor = 'blue';
+            SelectButton.style.color = 'black';
 
             cell3.appendChild(SelectButton);
 
