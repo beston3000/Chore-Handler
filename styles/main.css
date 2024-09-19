@@ -33,5 +33,6 @@ td {
     padding: 10px 20px; /* Add some padding */
     background-color: rgb(255, 64, 64);
     color: black;
-    outline: 4px;
+    outline: black solid 5px;
+    font-size: 10px;
 }
