@@ -31,4 +31,7 @@ td {
     top: 10px; /* Distance from the top */
     left: 10px; /* Distance from the right */
     padding: 10px 20px; /* Add some padding */
+    background-color: rgb(255, 64, 64);
+    color: black;
+    outline: 4px;
 }
