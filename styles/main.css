@@ -11,7 +11,7 @@ body {
 }
 
 .Title {
-    font-size: 45px;
+    font-size: 100px;
     font-family: "Soda Shake";
     color: black;
 }
@@ -35,4 +35,8 @@ td {
     color: black;
     outline: black solid 5px;
     font-size: 40px;
+}
+
+.MiddleNavButton {
+    width: 60px;
 }
