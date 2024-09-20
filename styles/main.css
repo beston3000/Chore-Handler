@@ -52,35 +52,14 @@ td {
     size: 120px;
     font-size: 40px;
     outline: black solid 5px ;
+    border-radius: 20px;
     background: none;
-    color:black 
-    
+    color:black ;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
 
 .MiddleNavButton:hover {
-    animation: Hover 0.25s forwards;
-}
-
-@keyframes Hover {
-
-    0% {
-        size: 120px;
-    }
-
-    100% {
-        size: 140px;
-        
-    }
-}
-
-@keyframes Click {
-
-    0% {
-
-    }
-
-    100% {
-        background-color: black;
-        color: white;
-    }
+    transform: scale(1.2); /* Smoothly increases size by 20% */
+    background-color: black; /* Optional: change background on hover */
+    color: white; /* Optional: change text color on hover */
 }
