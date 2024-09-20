@@ -49,6 +49,7 @@ td {
 
 .MiddleNavButton {
     font-family: "KG Red Hands";
+    box-shadow: none;
     size: 120px;
     font-size: 40px;
     outline: black solid 5px ;
