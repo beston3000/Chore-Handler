@@ -3,6 +3,16 @@
     src: url("../fonts/SodaShake.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "KG Red Hands";
+    src: url(../fonts/KGRedHands.ttf);
+}
+
+@font-face {
+    font-family: "KGRedHandsOutline";
+    src: url(../fonts/KGRedHandsOutline.ttf);
+}
+
 body {
     font-family: Arial, sans-serif; /* Sets a base font for the page */
     line-height: 1.6; /* Increases readability */
@@ -38,6 +48,7 @@ td {
 }
 
 .MiddleNavButton {
+    font-family: "KG Red Hands";
     size: 120px;
     font-size: 40px;
     outline: black solid 5px ;
