@@ -47,15 +47,15 @@ td {
 }
 
 .MiddleNavButton:hover {
-    size: 120px;
-    font-size: 40px;
-    outline: black solid 5px ;
-    background: none;
-    color:black;
-    animation: Hover 0.25s;
+    animation: Hover 0.25s forwards;
 }
 
 @keyframes Hover {
+
+    0% {
+        transform: scale(1);
+    }
+
     100% {
         transform: scale(1.5px);
         
@@ -63,6 +63,11 @@ td {
 }
 
 @keyframes Click {
+
+    0% {
+        
+    }
+
     100% {
         background-color: black;
         color: white;
