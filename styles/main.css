@@ -52,7 +52,7 @@ td {
     outline: black solid 5px ;
     background: none;
     color:black;
-    animation: Hover 1s;
+    animation: Hover 0.25s;
 }
 
 @keyframes Hover {
