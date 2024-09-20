@@ -7,7 +7,7 @@ body {
     font-family: Arial, sans-serif; /* Sets a base font for the page */
     line-height: 1.6; /* Increases readability */
     color: #000000; /* Sets a base text color */
-    background-color: #0070d8; /* Sets a background color for the page */
+    background-color: #ffffff; /* Sets a background color for the page */
 }
 
 .Title {
@@ -41,6 +41,30 @@ td {
     size: 120px;
     font-size: 40px;
     outline: black solid 5px ;
-    background-color: #ffaa48;
+    background: none;
     color:black
+    
+}
+
+.MiddleNavButton:hover {
+    size: 120px;
+    font-size: 40px;
+    outline: black solid 5px ;
+    background: none;
+    color:black;
+    animation: Hover 1s;
+}
+
+@keyframes Hover {
+    100% {
+        transform: scale(1.5px);
+        
+    }
+}
+
+@keyframes Click {
+    100% {
+        background-color: black;
+        color: white;
+    }
 }
