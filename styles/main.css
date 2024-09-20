@@ -55,7 +55,7 @@ td {
     outline: black solid 5px ;
     border-radius: 20px;
     background: none;
-    color:black ;
+    color:black !important;
     transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
 
